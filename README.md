@@ -24,3 +24,8 @@ En su aplicación, los usuarios deben poder registrarse, con su nombre, email, c
 - Utilizar Figaro para la configuración de variables de entorno. Figaro es una herramienta que te permite configurar variables de entorno en tu aplicación de manera segura. Utilízala para configurar las credenciales de acceso a Amazon S3.
 - Presentar una sección de Usuarios y accesos. Asegúrate de incluir una sección en tu aplicación donde los usuarios puedan ver y editar su información de perfil.
 - Leer todo el documento antes de comenzar el desarrollo individual. Asegúrate de leer todo el documento antes de comenzar el desarrollo para entender completamente los requerimientos y recomendaciones.
+
+## Credenciales Administrador
+
+- Correo: admin@mail.com
+- Contrasena: 123456
