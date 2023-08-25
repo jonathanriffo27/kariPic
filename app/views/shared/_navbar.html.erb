@@ -12,7 +12,7 @@
               <%# <% if current_user.name %>
               <%#= current_user.name %>
               <%# else %>
-              <%= image_tag current_user.avatar, style:'width:50px;'  %>
+              <%= image_tag current_user.avatar.variant(:thumb), class:'rounded-circle' if user_signed_in? && current_user.email != 'admin@mail.com'  %>
               Hola <%= current_user.email %>
               <%# <% end %>
             <% else %>

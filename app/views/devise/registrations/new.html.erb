@@ -22,7 +22,7 @@
   </div>
   <div class="field">
     <%= f.label :avartar, 'Imagen de perfil' %><br />
-    <%= f.file_field :avatar %>
+    <%= f.file_field :avatar, required: true %>
   </div>
   <div class="actions">
     <%= f.submit "Sign up" %>

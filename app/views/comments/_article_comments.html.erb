@@ -1,0 +1,8 @@
+<div>
+  <% @comments.each do |comment| %>
+    <p>
+      <%= image_tag comment.user.avatar.variant(:thumb), class:'rounded-circle' %>
+      <%= comment.description %>
+    </p>
+  <% end %>
+</div>
