@@ -2,6 +2,9 @@
   <% @comments.each do |comment| %>
     <p>
       <%= image_tag comment.user.avatar.variant(:thumb), class:'rounded-circle' %>
+      <strong>
+        <%= comment.user.name %>:
+      </strong>
       <%= comment.description %>
     </p>
   <% end %>
