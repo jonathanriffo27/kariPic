@@ -8,6 +8,6 @@ class User < ApplicationRecord
   has_many :posts
 
   has_one_attached :avatar do |attachable|
-    attachable.variant :thumb, resize_to_limit: [50, 50]
+    attachable.variant :thumb, resize_to_limit: [40, 40]
   end
 end

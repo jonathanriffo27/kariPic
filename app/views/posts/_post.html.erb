@@ -1,14 +1,16 @@
 <div id="<%= dom_id post %>">
-  <p>
-    <strong>Name:</strong>
-    <%= post.name %>
-  </p>
-  <p>
-    <strong>Image:</strong>
-    <%= image_tag post.image, style:'width:300px;' %>
-  </p>
-  <p>
-    <strong>Context:</strong>
-    <%= post.context %>
-  </p>
+  <div class="card text-bg-dark mx-5">
+    <%= image_tag post.image, class:"card-img" %>
+    <div class="card-img-overlay d-flex flex-column justify-content-end">
+      <div>
+        <h5 class="card-title"></h5>
+      </div>
+      <div class=''>
+        <span class="card-text fs-5 bg-dark px-3 pt-1 pb-2">Leyenda: "<%= post.context %>"</span>
+      </div>
+      <div class='text-end m-1 '>
+        <p class="card-text"><small>Posteada hace 3 mins</small></p>
+      </div>
+    </div>
+  </div>
 </div>

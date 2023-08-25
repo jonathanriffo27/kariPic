@@ -1,11 +1,12 @@
-<p style="color: green"><%= notice %></p>
-<h1>Posts</h1>
-<div id="posts">
+<h1 class='mb-5 ms-5'>Mis Fotos</h1>
+<div class="text-end me-5">
+  <%= link_to "Nueva foto", new_post_path, class:'btn btn-success btn- me-5 mb-4' if user_signed_in? && current_user.email == 'admin@mail.com' %>
+</div>
+<div id="posts" class='mx-5'>
   <% @posts.each do |post| %>
     <%= render post %>
     <p>
-      <%= link_to "Show this post", post %>
+      <%= link_to "Ver foto", post, class:'btn btn-light btn-sm ms-5 mt-2' %>
     </p>
   <% end %>
 </div>
-<%= link_to "New post", new_post_path if user_signed_in? && current_user.email == 'admin@mail.com' %>

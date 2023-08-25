@@ -10,18 +10,18 @@
     </div>
   <% end %>
   <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.label :name, 'Titulo', style: "display: block", class:'form-label' %>
+    <%= form.text_field :name, class:'form-control w-25' %>
   </div>
   <div>
-    <%= form.label :image, style: "display: block" %>
-    <%= form.file_field :image %>
+    <%= form.label :image,'Imagen', style: "display: block", class:'form-label' %>
+    <%= form.file_field :image, class:'form-control w-25' %>
   </div>
   <div>
-    <%= form.label :context, style: "display: block" %>
-    <%= form.text_field :context %>
+    <%= form.label :context, 'Leyenda', style: "display: block", class:'form-label' %>
+    <%= form.text_area :context, class:'form-control w-75', rows:'4' %>
   </div>
   <div>
-    <%= form.submit %>
+    <%= form.submit 'Aceptar', class:'my-3' %>
   </div>
 <% end %>

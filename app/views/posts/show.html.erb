@@ -1,9 +1,18 @@
-<p style="color: green"><%= notice %></p>
 <%= render @post %>
-<%= render 'comments/form' %>
-<%= render 'comments/article_comments' %>
-<div>
-  <%= link_to "Edit this post", edit_post_path(@post) %> |
-  <%= link_to "Back to posts", posts_path %>
-  <%= button_to "Destroy this post", @post, method: :delete %>
+<div class="my-4 ms-5">
+  <% if user_signed_in? %>
+    <%= render "comments/form", comment: @comment%>
+  <% else %>
+    <p class=''>Registrate para comentar</p>
+  <% end %>
+  <%= render 'comments/article_comments' %>
+</div>
+<% if user_signed_in? && current_user.email == 'admin@mail.com' %>
+  <div class='d-flex gap-2'>
+    <%= link_to "Editar esta publicacion", edit_post_path(@post), class: 'btn btn-light btn-sm' %>
+    <%= button_to "Eliminar esta publicacion", @post, class: 'btn btn-light btn-sm', method: :delete %>
+  </div>
+<% end %>
+<div class='text-end me-5'>
+  <%= link_to "Inicio", posts_path, class: 'btn btn-light btn-sm'  %>
 </div>
